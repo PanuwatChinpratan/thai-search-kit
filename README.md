@@ -7,8 +7,6 @@ documents, commands, help content, or chat retrieval—without an API key or net
 
 **[Open the live playground](https://panuwatchinpratan.github.io/thai-search-kit/)**
 
-**[Open the live playground](https://panuwatchinpratan.github.io/thai-search-kit/)**
-
 > Status: `0.1.0` foundation release. The public API is intentionally small while ranking quality is
 > validated against a reproducible Thai benchmark.
 
@@ -31,8 +29,8 @@ npm install
 npm run dev
 ```
 
-The library is not published to npm yet. The first public release will be tagged after the API has
-been validated in real projects.
+The library is not published to npm yet. Use the `v0.1.0` GitHub release for the current stable
+source while the public API is validated in real projects.
 
 ## Use
 

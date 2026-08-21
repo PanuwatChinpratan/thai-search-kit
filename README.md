@@ -5,6 +5,8 @@
 Fast, typo-tolerant Thai search for TypeScript. No API key, model download, runtime dependency, or
 network request.
 
+**[Open the live playground](https://panuwatchinpratan.github.io/thai-search-kit/)**
+
 > Status: `0.1.0` foundation release. The public API is intentionally small while ranking quality is
 > validated against a reproducible Thai benchmark.
 

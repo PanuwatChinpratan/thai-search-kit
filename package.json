@@ -1,7 +1,7 @@
 {
   "name": "thai-search-kit",
   "version": "0.1.0",
-  "description": "Fast, typo-tolerant Thai search for TypeScript — no API key required.",
+  "description": "General-purpose, typo-tolerant Thai search for TypeScript — local-first and API-free.",
   "type": "module",
   "license": "MIT",
   "author": "Panuwat Chinpratan",
@@ -13,6 +13,8 @@
     "thai",
     "search",
     "fuzzy-search",
+    "local-search",
+    "typo-tolerant",
     "typescript",
     "nlp"
   ],

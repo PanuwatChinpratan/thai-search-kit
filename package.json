@@ -1,0 +1,57 @@
+{
+  "name": "thai-search-kit",
+  "version": "0.1.0",
+  "description": "Fast, typo-tolerant Thai search for TypeScript — no API key required.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Panuwat Chinpratan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanuwatChinpratan/thai-search-kit.git"
+  },
+  "keywords": [
+    "thai",
+    "search",
+    "fuzzy-search",
+    "typescript",
+    "nlp"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite --config playground/vite.config.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "build:playground": "vite build --config playground/vite.config.ts",
+    "build:all": "npm run build && npm run build:playground",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "tsc --noEmit && tsc -p playground/tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "benchmark": "tsx benchmark/run.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.9",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "6.1.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.6",
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  }
+}

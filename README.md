@@ -29,8 +29,8 @@ npm install
 npm run dev
 ```
 
-The library is not published to npm yet. The first public release will be tagged after the API has
-been validated in real projects.
+The library is not published to npm yet. Use the `v0.1.0` GitHub release for the current stable
+source while the public API is validated in real projects.
 
 ## Use
 

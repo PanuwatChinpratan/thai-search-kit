@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
-import { benchmarkCases, supportDocuments } from "../../benchmark/data";
+import { benchmarkCases } from "../../benchmark/data";
 import { createThaiSearch, normalizeThai, tokenizeThai } from "../../src";
+import { demoDocuments } from "./demo-data";
 
-const search = createThaiSearch(supportDocuments);
-const examples = ["ชำระเงินไง", "ส่งของกี่วันถืง", "ใบเสร็จอยู่ไหน", "จำพาสเวิร์ดไม่ได้"];
+const search = createThaiSearch(demoDocuments);
+const examples = ["เสื้อทำงานสีขาว", "ส่งของกี่วันถืง", "วิธี export csv", "วันลาพักร้อน"];
 
 const confidenceLabel = {
   high: "ชัดเจน",
@@ -18,7 +19,7 @@ const confidenceStyle = {
 } as const;
 
 export function App() {
-  const [query, setQuery] = useState("ส่งของกี่วันถืง");
+  const [query, setQuery] = useState("เสื้อทำงานสีขาว");
   const results = useMemo(() => search.search(query, { limit: 4 }), [query]);
   const tokens = useMemo(() => tokenizeThai(query), [query]);
   const top = results[0];
@@ -52,7 +53,7 @@ export function App() {
         </div>
         <div>
           <p className="flex items-center text-[11px] font-semibold uppercase tracking-[.18em] before:mr-3 before:h-0.5 before:w-10 before:bg-red before:content-['']">
-            ค้นภาษาไทยแบบ local-first
+            เครื่องมือค้นภาษาไทยอเนกประสงค์
           </p>
           <h1 className="my-5 font-display text-[clamp(66px,18vw,156px)] leading-[.82] tracking-[-.06em] md:text-[clamp(72px,11vw,156px)]">
             ค้นไทย
@@ -62,7 +63,7 @@ export function App() {
             </em>
           </h1>
           <p className="max-w-148 text-[clamp(18px,2vw,25px)] font-light leading-[1.55]">
-            รองรับภาษาพูดและคำพิมพ์ผิด โดยไม่ส่งข้อความออกจากเครื่อง ไม่ใช้โมเดล และไม่เสียค่า API
+            ใช้ค้นสินค้า เอกสาร FAQ หรือคำสั่ง รองรับภาษาพูดและคำพิมพ์ผิดโดยไม่เสียค่า API
           </p>
         </div>
 
